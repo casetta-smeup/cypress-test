@@ -59,15 +59,15 @@ describe('My first test', function () {
           .get(".mccdone tbody tr")
           .eq(11)
           .trigger("drop", dataTransfer)
-          .get(".LAB.labelText")
+          .get(".LAB .labelText")
           .should("have.length", 6)
           .eq(0)
-          .contains("");
+          .contains("FROM.STR001 = 001 - TO.STR001 = 001");
       });
 
     // logout
-    // cy.get("#webup\\:logout").click();
+    cy.get("#webup\\:logout").click();
 
-    // cy.get("#login");
+    cy.get("#login");
   })
 });
